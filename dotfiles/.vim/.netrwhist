@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/florentincoeurdoux/Documents/AssessFirst/prototypes/demo-sourcing/emeric/patrick/python/patrick/core/adequacies'
+let g:netrw_dirhist_5='/Users/florentincoeurdoux'
+let g:netrw_dirhist_4='/Users/florentincoeurdoux/Documents'
+let g:netrw_dirhist_3='/Users/florentincoeurdoux/Documents/vimwiki'
+let g:netrw_dirhist_2='/Users/florentincoeurdoux'
+let g:netrw_dirhist_1='/Users/florentincoeurdoux/Documents'
+let g:netrw_dirhist_0='/Users/florentincoeurdoux/Documents/vimwiki'
+let g:netrw_dirhist_9='/Users/florentincoeurdoux/Documents/vimwiki/science'
+let g:netrw_dirhist_8='/Users/florentincoeurdoux/Documents/vimwiki/science/df'
+let g:netrw_dirhist_7='/Users/florentincoeurdoux/Documents/vimwiki/science/nflows'
