@@ -1,15 +1,8 @@
 call plug#begin()
-Plug 'github/copilot.vim'
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'vimwiki/vimwiki'
-Plug 'lervag/vimtex'
-Plug 'wfxr/minimap.vim'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'}
 call plug#end()
 
 colorscheme palenight
@@ -18,8 +11,6 @@ nmap jk <esc>
 imap jk <esc>
 vmap jk <esc>
 omap jk <esc>
-
-set tags+=~/Documents/AssessFirst/prototypes/demo-sourcing/emeric/patrick/python/patrick/core/tags
 
 " cursor line
 let &t_SI = "\e[6 q"
@@ -84,7 +75,7 @@ set clipboard=unnamed
 set nocompatible
 filetype plugin on
 syntax on
-let g:vimwiki_list = [{'path': '~/Documents/Notes/',
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 let mapleader = ","
 let g:vimwiki_listsyms = '✗○◐●✓'
@@ -113,4 +104,3 @@ let g:minimap_highlight_range = 1
 " markdown previewer
 nmap PR :MarkdownPreview<CR>
 nmap PC :MarkdownPreviewStop<CR>
-
