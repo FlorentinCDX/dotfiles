@@ -3,14 +3,17 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'vimwiki/vimwiki'
+Plug 'lervag/vimtex'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'jdhao/better-escape.vim'
 call plug#end()
 
 colorscheme palenight
 " Remap jk to <esc>
-nmap jk <esc>
-imap jk <esc>
-vmap jk <esc>
-omap jk <esc>
+let g:better_escape_shortcut = 'jk'
+
+"Launch python from vim
+nnoremap py :w \| !python3 %<CR>
 
 " cursor line
 let &t_SI = "\e[6 q"
@@ -75,7 +78,7 @@ set clipboard=unnamed
 set nocompatible
 filetype plugin on
 syntax on
-let g:vimwiki_list = [{'path': '~/Documents/vimwiki/',
+let g:vimwiki_list = [{'path': '~/Documents/Notes/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 let mapleader = ","
 let g:vimwiki_listsyms = '✗○◐●✓'
@@ -91,16 +94,11 @@ set noswapfile
 syntax enable
 let g:tex_flavor='latex'
 let g:vimtex_quickfix_mode=0
-let g:vimtex_view_method = 'zathura' 
+let g:vimtex_view_method = 'sioyek' 
+let g:vimtex_view_sioyek_exe = '/Applications/sioyek.app/Contents/MacOS/sioyek'
 
 " NerdTree
 nmap <F6> :NERDTreeToggle<CR>
 
-" Minimap 
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
-let g:minimap_highlight_range = 1
-
-" markdown previewer
-nmap PR :MarkdownPreview<CR>
-nmap PC :MarkdownPreviewStop<CR>
+inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
+inoremap <silent><expr> <cr> "\<c-g>u\<CR>"
